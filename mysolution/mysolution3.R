@@ -217,7 +217,7 @@ server <- function(input, output, session) {
     max_iter    <- input$max_iter
     prob_slider <- input$prob_mult
     
-    set.seed(123)  # powtarzalność wyników
+    set.seed(29112025)   # powtarzalność wyników
     
     res <- run_diffusion_experiments(
       prob_mat    = prob_mat,
