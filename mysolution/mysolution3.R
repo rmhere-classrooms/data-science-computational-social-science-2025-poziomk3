@@ -1,5 +1,3 @@
-
-
 library(shiny)
 library(igraph)
 
@@ -45,10 +43,7 @@ g <- simplify(
   edge.attr.comb  = list(weight = "first")
 )
 
-# Weryfikacja: 167 węzłów, 5783 krawędzie
 stopifnot(vcount(g) == 167, ecount(g) == 5783)
-
-
 
 n_nodes   <- vcount(g)
 seed_frac <- 0.05
@@ -186,7 +181,7 @@ ui <- fluidPage(
     sidebarPanel(
       sliderInput(
         inputId = "prob_mult",
-        label   = "Mnożnik prawdopodobieństwa aktywacji (w % wartości wij)",
+        label   = "Mnożnik prawdopodobieństwa aktywacji",
         min     = 10,
         max     = 200,
         value   = 100,
